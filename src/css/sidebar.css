@@ -1,27 +1,57 @@
-/* ========== SIDEBAR IZQUIERDO ========== */
-
+/* ========== SIDEBAR — DARK RUBY NEGRO + FLORES ========== */
 .aside {
     width: 220px;
     height: 100vh;
     position: fixed;
-    top: 0;
-    left: 0;
+    top: 0; left: 0;
     display: flex;
     flex-direction: column;
     font-family: 'Bankai';
-    color: var(--fnd1);
-    background: linear-gradient( 160deg,  #C0392B 0%,  #8B1A1A 50%,  #4A0D0D 100%);
-    border-right: 1px solid  #4A0D0D ;
-    box-shadow: 4px 0 18px rgba(176, 28, 28, 0.35);
+    color: #F5F0EB;
+    background: linear-gradient(175deg, #220508 0%, #130205 55%, #0A0103 100%);
+    border-right: none;
+    box-shadow: 4px 0 32px rgba(0,0,0,0.75);
     box-sizing: border-box;
+    overflow: hidden;
 }
 
+/* flores decorativas - esquina inferior izquierda */
+.aside::before {
+    content: '';
+    position: absolute;
+    bottom: -20px; left: -20px;
+    width: 180px; height: 220px;
+    background: radial-gradient(ellipse at 30% 80%,
+        rgba(139,21,35,0.18) 0%,
+        rgba(139,21,35,0.08) 40%,
+        transparent 70%
+    );
+    pointer-events: none;
+}
+
+/* línea rubí lateral derecha */
+.aside::after {
+    content: '';
+    position: absolute;
+    top: 0; right: 0; bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg,
+        transparent 0%,
+        rgba(139,21,35,0.6) 25%,
+        rgba(139,21,35,0.9) 50%,
+        rgba(139,21,35,0.6) 75%,
+        transparent 100%
+    );
+}
+
+/* ── Head ── */
 .head {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 16px 8px;
-    gap: 12px;
+    padding: 26px 8px 16px;
+    gap: 10px;
+    position: relative;
 }
 
 .name-resturant {
@@ -32,105 +62,139 @@
 }
 
 .name-top {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
 }
 
 .name-resturant img {
-  align-items: center;
-    width: 80px;
+    width: 72px;
     border-radius: 50%;
+    border: 2px solid rgba(139,21,35,0.5);
+    box-shadow: 0 0 20px rgba(139,21,35,0.35), 0 0 40px rgba(139,21,35,0.15);
+    filter: drop-shadow(0 2px 8px rgba(0,0,0,0.6));
 }
 
 .name-resturant h1 {
     font-size: 2rem;
     line-height: 1.1;
+    color: #F5F0EB;
+    margin: 0;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.5);
 }
 
 .name-resturant span {
-    font-size: 0.9rem;
-    opacity: 0.7;
+    font-size: 0.72rem;
+    color: rgba(245,240,235,0.55);
     text-align: center;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
 }
 
-.profile svg  {
-    width: 20px;
-    border-radius: 0;
-    flex-shrink: 0;
+/* separador */
+.head::after {
+    content: '';
+    display: block;
+    width: 55%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(139,21,35,0.5), transparent);
+    margin-top: 6px;
 }
 
+/* perfil */
 .profile {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    gap: 10px;
+    width: 85%;
+    gap: 8px;
     border-radius: 50px;
-    background-color: #79030383;
+    padding: 8px 12px;
+    background: rgba(139,21,35,0.2);
+    border: 1px solid rgba(139,21,35,0.35);
+    font-size: 0.8rem;
+    color: rgba(245,240,235,0.7);
 }
 
+.profile svg {
+    width: 16px;
+    flex-shrink: 0;
+    color: var(--color2);
+}
+
+/* ── Nav ── */
 .option {
     display: flex;
     flex-direction: column;
     flex: 1;
-    gap: 4px;
-    padding: 8px;
+    gap: 2px;
+    padding: 8px 10px;
 }
 
 .option div svg {
-    width: 20px !important;
-    height: 20px !important;
+    width: 18px !important;
+    height: 18px !important;
     flex-shrink: 0;
 }
 
 .option div {
     display: flex;
     align-items: center;
-    gap: 8px;
-    padding: 8px 16px;
-    border-radius: 50px;
+    gap: 10px;
+    padding: 11px 14px;
+    border-radius: 10px;
     background-color: transparent;
-    font-size: 0.85rem;
+    font-size: 0.82rem;
+    color: rgba(245,240,235,0.6);
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+.option div:hover {
+    background-color: rgba(255,255,255,0.06);
+    color: #F5F0EB;
 }
 
 .option div.active {
-    background-color: rgba(255, 255, 255, 0.15);
+    background: linear-gradient(135deg, rgba(139,21,35,0.55), rgba(107,15,26,0.35));
+    color: #F5F0EB;
+    border-left: 3px solid var(--color1);
+    padding-left: 11px;
+    box-shadow: inset 0 0 12px rgba(139,21,35,0.2);
 }
 
+/* ── Exit ── */
 .exit {
     margin-top: auto;
-    padding: 8px 16px;
+    padding: 14px;
     display: flex;
     justify-content: center;
 }
 
 .exit button#exit-btn {
-    width: 80%;
-    padding: 10px 20px;
-    background-color: rgba(255, 255, 255, 0.15);
-    color: #ffffff;
-    border: 2px solid rgba(255, 255, 255, 0.5);
+    width: 85%;
+    padding: 9px 20px;
+    background: transparent;
+    color: rgba(245,240,235,0.5);
+    border: 1px solid rgba(139,21,35,0.3);
     border-radius: 50px;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     font-family: 'Bankai';
-    font-weight: 600;
     cursor: pointer;
-    transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.1s ease;
+    transition: all 0.2s;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.05em;
 }
 
 .exit button#exit-btn:hover {
-    background-color: rgba(194, 61, 61, 0.25);
-    border-color: rgba(255, 255, 255, 0.8);
+    background: rgba(139,21,35,0.2);
+    border-color: var(--color1);
+    color: #F5F0EB;
     transform: scale(1.02);
 }
 
-.exit button#exit-btn:active {
-    transform: scale(0.98);
-}
+.exit button#exit-btn:active { transform: scale(0.98); }

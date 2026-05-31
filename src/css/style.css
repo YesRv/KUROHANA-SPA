@@ -1,5 +1,4 @@
 /* ========== IMPORTS ========== */
-
 @import url('./sidebar.css');
 @import url('./carrito.css');
 @import url('./stock.css');
@@ -8,65 +7,68 @@
 @import url('./modal.css');
 @import url('./modal-order.css');
 
-/* ========== KUROHANA SPA — ESTILOS PRINCIPALES ========== */
-
+/* ========== KUROHANA SPA — PANTONE DARK RUBY ========== */
 @font-face {
     font-family: 'Bankai';
     src: url(/src/assets/font/Bankai\ Demo\ Version.otf) format('opentype');
 }
-
 @font-face {
     font-family: "Higuen";
     src: url(/src/assets/font/Higuen\ Serif.otf) format('opentype');
 }
 
-
-
-
 /* ========== VARIABLES GLOBALES ========== */
-
 :root {
-  /* fondos */
-  --fnd1: #232323;
-  --fnd2: #161412;
-  --fnd3: #1E1C18;
+  /* Sidebar: negro puro */
+  --sidebar-bg-top:    #220508;
+  --sidebar-bg-mid:    #130205;
+  --sidebar-bg-bot:    #0A0103;
 
-  /* rojos lacados (acento primario) */
-  --color1: #C0392B;
-  --color2: #E84040;
-  --color3: #8B1A1A;
+  /* App center: blanco crema */
+  --fnd1: #F5F0EB;
+  --fnd2: #EDE8E3;
+  --fnd3: #E8E2DB;
 
-  /* acentos secundarios */
-  --color4: #D4A520;   /* dorado */
-  --color5: #4A7C59;   /* jade */
-  --color6: #8C6A3F;   /* Toasted Bamboo */
+  /* Dark Ruby (acento primario) */
+  --color1: #8B1523;
+  --color2: #A81A2B;
+  --color3: #6B0F1A;
 
-  /* texto */
-  --txt1: #F5F0E8;
-  --txt2: #B0A898;
-  --txt3: #5C5650;
+  /* textos sobre fondo claro */
+  --txt1:  #1A1A1A;
+  --txt2:  #555555;
+  --txt3:  #999999;
 
-
-  /* aliases semánticos */
-  --red-main:   #C0392B;
-  --red-light:  #3A1212;
-  --red-dark:   #8B1A1A;
-  --gold-main:  #D4A520;
-  --jade-main:  #4A7C59;
-  --text-dark:  #F5F0E8;
-  --text-muted: #B0A898;
-  --bg-app:     #0D0D0D;
-  --white:      #F5F0E8;
-  --black:      #050505;
+  /* alias semánticos */
+  --red-main:   #8B1523;
+  --text-dark:  #1A1A1A;
+  --text-muted: #555555;
+  --bg-app:     #EDE8E3;
+  --white:      #FFFFFF;
+  --black:      #0A0103;
 
   --border-radius: 16px;
+
+  /* superficies tarjetas/inputs */
+  --surface-1: #FFFFFF;
+  --surface-2: #F0EBE5;
+  --surface-3: #E8E2DB;
+
+  /* bordes sobre fondo claro */
+  --border-subtle: rgba(0, 0, 0, 0.08);
+  --border-warm:   rgba(139, 21, 35, 0.2);
+
+  /* carrito fondo */
+  --carrito-bg: #FFFFFF;
 }
-/* ========== BASE ========== */
+
+/* ========== RESET / BASE ========== */
+*, *::before, *::after { box-sizing: border-box; }
 
 body {
-    background-color: var(--fnd1);
+    background-color: var(--fnd2);
     font-family: 'Bankai';
-    color: var(--text-dark);
+    color: var(--txt1);
     margin: 0;
     padding: 0;
 }
@@ -74,11 +76,15 @@ body {
 #app {
     margin-left: 220px;
     margin-right: 240px;
-    padding: 0px;
-    box-sizing: border-box;
+    padding: 0;
     min-height: 100vh;
+    background-color: var(--fnd2);
 }
 
-#app.sin-carrito {
-    margin-right: 0px;
-}
+#app.sin-carrito { margin-right: 0; }
+
+/* ========== SCROLLBAR ========== */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: var(--fnd2); }
+::-webkit-scrollbar-thumb { background: var(--color3); border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color1); }

@@ -1,70 +1,102 @@
+/* ========== MODAL SETTINGS — FONDO CLARO ========== */
+
 .modal-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0,0,0,0.4);
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 1000;
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(6px);
 }
-
-.modal-overlay.hidden {
-  display: none;
-}
+.modal-overlay.hidden { display: none; }
 
 .modal-box {
-  background: var(--white);
+  background: #FFFFFF;
+  border: 1px solid rgba(0,0,0,0.08);
   border-radius: var(--border-radius);
   width: 90%;
-  max-width: 500px;
+  max-width: 480px;
   max-height: 80vh;
   overflow-y: auto;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-  animation: modalFadeIn 0.2s ease-out;
+  box-shadow: 0 24px 64px rgba(0,0,0,0.2);
+  animation: modalFadeIn 0.22s ease-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.modal-box::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color3), var(--color1), var(--color3));
 }
 
 .modal-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 24px;
-  border-bottom: 1px solid var(--fnd3);
+  padding: 20px 24px 16px;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
 }
 
 .modal-title {
   margin: 0;
-  font-size: 1.25rem;
-  color: var(--txt1);
+  font-size: 1.15rem;
+  color: #1A1A1A;
+  letter-spacing: 0.04em;
 }
 
 .modal-close {
   background: none;
   border: none;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   cursor: pointer;
-  color: var(--txt3);
+  color: #999;
   padding: 4px 8px;
   border-radius: 8px;
   line-height: 1;
+  transition: background 0.2s, color 0.2s;
 }
-
-.modal-close:hover {
-  background: var(--fnd1);
-  color: var(--txt1);
-}
+.modal-close:hover { background: rgba(139,21,35,0.08); color: var(--color1); }
 
 .modal-body {
-  padding: 24px;
+  padding: 22px 24px;
+  overflow-y: auto;
+}
+
+.modal-body input,
+.modal-body select {
+  background-color: #F8F5F2;
+  color: #1A1A1A;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 10px;
+  padding: 11px 14px;
+  font-family: 'Bankai';
+  font-size: 14px;
+  outline: none;
+  width: 100%;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.modal-body input:focus,
+.modal-body select:focus {
+  border-color: var(--color1);
+  box-shadow: 0 0 0 3px rgba(139,21,35,0.1);
+}
+
+.modal-body label {
+  font-size: 11px;
+  font-weight: 600;
+  color: #777;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  display: block;
+  margin-bottom: 6px;
 }
 
 @keyframes modalFadeIn {
-  from {
-    opacity: 0;
-    transform: scale(0.95);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
+  from { opacity: 0; transform: scale(0.96) translateY(8px); }
+  to   { opacity: 1; transform: scale(1)    translateY(0); }
 }

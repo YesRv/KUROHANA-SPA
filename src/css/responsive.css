@@ -33,7 +33,7 @@
     }
 
     .name-resturant img {
-        width: 40px;
+        width: 38px;
     }
 
     .option div {
@@ -76,6 +76,24 @@
         z-index: 100;
         box-sizing: border-box;
         overflow: hidden;
+        /* quitar decoración lateral en mobile horizontal */
+        border-right: none;
+        border-bottom: 1px solid rgba(139,21,35, 0.25);
+    }
+
+    /* quitar la línea lateral vertical en modo horizontal */
+    .aside::after {
+        display: none;
+    }
+
+    /* borde inferior decorativo */
+    .aside::before {
+        content: '';
+        position: absolute;
+        bottom: 0; left: 0; right: 0;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, var(--color4), var(--color1), var(--color4), transparent);
+        opacity: 0.5;
     }
 
     .head {
@@ -101,6 +119,7 @@
     .name-resturant img {
         width: 32px;
         height: 32px;
+        border: 1px solid rgba(212, 165, 32, 0.3);
     }
 
     .name-resturant h1 {
@@ -127,6 +146,13 @@
         border-radius: 8px;
         gap: 2px;
         justify-content: center;
+        border-left: none !important;
+    }
+
+    .option div.active {
+        background: rgba(139,21,35, 0.25);
+        border-left: none !important;
+        padding-left: 10px !important;
     }
 
     .option div span {
@@ -138,11 +164,6 @@
         height: 20px !important;
     }
 
-    .option div.active {
-        background-color: rgba(255, 255, 255, 0.2);
-        border-radius: 8px;
-    }
-
     .exit {
         margin-top: 0;
         padding: 0;
@@ -151,7 +172,7 @@
     .exit button#exit-btn {
         width: auto;
         padding: 6px 10px;
-        font-size: 0.75rem;
+        font-size: 0.72rem;
         display: flex;
         border-radius: 8px;
     }
@@ -173,7 +194,7 @@
         z-index: 300;
         transform: translateX(100%);
         transition: transform 0.32s cubic-bezier(0.4, 0, 0.2, 1);
-        box-shadow: -8px 0 32px rgba(73, 28, 176, 0.25);
+        box-shadow: -8px 0 32px rgba(0, 0, 0, 0.6);
         border-radius: 20px 0 0 20px;
         overflow: hidden;
     }
@@ -189,10 +210,10 @@
     }
 
     #btn-cerrar-carrito {
-        background: rgba(255,255,255,0.15);
-        border: none;
-        color: #fff;
-        font-size: 1.2rem;
+        background: rgba(255,255,255,0.08);
+        border: 1px solid rgba(255,255,255,0.12);
+        color: var(--txt2);
+        font-size: 1.1rem;
         width: 28px;
         height: 28px;
         border-radius: 50%;
@@ -206,7 +227,8 @@
     }
 
     #btn-cerrar-carrito:hover {
-        background: rgba(255,255,255,0.3);
+        background: rgba(139,21,35, 0.25);
+        color: var(--txt1);
     }
 
     #carrito-fab {
@@ -220,18 +242,18 @@
         width: 56px;
         height: 56px;
         border-radius: 50%;
-        background-color: var(--color1);
+        background: linear-gradient(135deg, var(--color1), var(--color3));
         color: #fff;
         border: none;
         cursor: pointer;
-        box-shadow: 0 6px 20px rgba(73, 28, 176, 0.45);
+        box-shadow: 0 6px 20px rgba(139,21,35, 0.5);
         font-size: 1.4rem;
         transition: transform 0.2s, box-shadow 0.2s;
     }
 
     #carrito-fab:hover {
         transform: scale(1.08);
-        box-shadow: 0 8px 24px rgba(73, 28, 176, 0.55);
+        box-shadow: 0 8px 26px rgba(139,21,35, 0.62);
     }
 
     #carrito-fab:active {
@@ -243,8 +265,8 @@
         top: -4px;
         right: -4px;
         background: var(--color4);
-        color: #fff;
-        font-size: 0.65rem;
+        color: var(--black);
+        font-size: 0.62rem;
         font-weight: 700;
         min-width: 18px;
         height: 18px;
@@ -262,13 +284,11 @@
     }
 
     .stock {
-        padding: 16px;
-        border-radius: 0;
-        box-shadow: none;
+        padding: 14px 16px;
     }
 
     .hero {
-        min-height: 100px;
+        min-height: 110px;
         padding: 20px;
     }
 
@@ -291,18 +311,23 @@
     }
 
     .cat-btn {
-        padding: 10px 14px;
+        padding: 8px 14px;
         font-size: 0.8rem;
         min-width: unset;
     }
 
     #data-container {
         grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-        gap: 16px;
+        gap: 14px;
     }
 
     .formData {
         grid-template-columns: 1fr;
+    }
+
+    #modal-order {
+        width: 95%;
+        max-height: 90vh;
     }
 }
 
@@ -321,6 +346,6 @@
 
     .exit button#exit-btn {
         padding: 6px 6px;
-        font-size: 0.7rem;
+        font-size: 0.68rem;
     }
 }
