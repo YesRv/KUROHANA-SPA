@@ -14,14 +14,31 @@ export function modalTemplate(id, title, content) {
   `;
 }
 
+// Contador de modales abiertos
+let openModalCount = 0;
+
 export function openModal(id) {
   const overlay = document.getElementById(`${id}-overlay`);
-  if (overlay) overlay.classList.remove("hidden");
+  if (overlay) {
+    overlay.classList.remove("hidden");
+    // Bloquear scroll cuando se abre el primer modal
+    if (openModalCount === 0) {
+      document.body.style.overflow = "hidden";
+    }
+    openModalCount++;
+  }
 }
 
 export function closeModal(id) {
   const overlay = document.getElementById(`${id}-overlay`);
-  if (overlay) overlay.classList.add("hidden");
+  if (overlay) {
+    overlay.classList.add("hidden");
+    openModalCount--;
+    // Desbloquear scroll cuando se cierra el último modal
+    if (openModalCount === 0) {
+      document.body.style.overflow = "";
+    }
+  }
 }
 
 export function initModal(id) {
