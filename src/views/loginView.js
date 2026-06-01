@@ -33,15 +33,19 @@ export function loginView() {
         <form id="form-new">
           <label class="label-form" for="usernameNew">User</label>
           <input type="text" id="usernameNew" placeholder="username">
+          
 
           <label class="label-form" for="useremail">Email</label>
           <input type="email" id="useremail" placeholder="maria@example.com">
+          
 
           <label class="label-form" for="passwordNew">Password</label>
           <input type="password" id="passwordNew" placeholder="••••••••">
+          
 
           <label class="label-form" for="passwordConfirmation">Confirm Password</label>
           <input type="password" id="passwordConfirmation" placeholder="••••••••">
+          
 
           <button id="adduser" type="submit">Sign Up</button>
 
