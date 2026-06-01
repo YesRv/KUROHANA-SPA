@@ -20,10 +20,10 @@
   max-width: 480px;
   max-height: 80vh;
   overflow-y: auto;
+  overflow-x: hidden;
   box-shadow: 0 24px 64px rgba(0,0,0,0.2);
   animation: modalFadeIn 0.22s ease-out;
   position: relative;
-  overflow: hidden;
 }
 
 .modal-box::before {
