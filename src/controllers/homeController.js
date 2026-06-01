@@ -252,13 +252,6 @@ export function initHome(username, isAdmin, appContainer) {
 
   if (btnBuscar)
     btnBuscar.addEventListener("click", () => {
-      // const texto = (inputBuscar ? inputBuscar.value : "").toLowerCase();
-      // const cards = document.querySelectorAll("#data-container > div");
-      // cards.forEach((card) => {
-      //   const nombreEl = card.querySelector(".nombrecito");
-      //   const nombre = nombreEl ? nombreEl.textContent.toLowerCase() : "";
-      //   card.style.display = nombre.includes(texto) ? "block" : "none";
-      // });
       const texto = (inputBuscar ? inputBuscar.value : "").toLowerCase();
 
       fetchApiData("/productos").then((data) => {
@@ -272,10 +265,15 @@ export function initHome(username, isAdmin, appContainer) {
       });
     });
 
+  function updatePaginationButtons() {
+    if (btnPrev) btnPrev.disabled = currentPage <= 1;
+  }
+
   if (btnNext)
     btnNext.addEventListener("click", () => {
       currentPage++;
       renderProducts(isAdmin);
+      updatePaginationButtons();
     });
 
   if (btnPrev)
@@ -283,8 +281,11 @@ export function initHome(username, isAdmin, appContainer) {
       if (currentPage > 1) {
         currentPage--;
         renderProducts(isAdmin);
+        updatePaginationButtons();
       }
     });
+
+  updatePaginationButtons();
 
   if (btnCreate)
     btnCreate.addEventListener("click", (e) => {

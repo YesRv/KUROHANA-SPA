@@ -7,7 +7,7 @@
       "price": "25",
       "country": "japan",
       "id": "XjU3D77nS7M",
-      "pedidos": 0
+      "pedidos": 2
     },
     {
       "url": "https://www.muyjapones.com/wp-content/uploads/2019/08/Takoyaki-1.jpg",
@@ -160,7 +160,7 @@
       "price": "58",
       "country": "japan",
       "id": "pNpBWBTMjtk",
-      "pedidos": 6
+      "pedidos": 7
     },
     {
       "url": "https://cocinista.b-cdn.net/download/bancorecursos/recetas/receta-fideos-ramen-con-miso.jpg",
@@ -331,7 +331,7 @@
       "price": "21",
       "country": "china",
       "id": "D8MskmwZ3PQ",
-      "pedidos": 0
+      "pedidos": 1
     },
     {
       "url": "https://christieathome.com/wp-content/uploads/2023/11/Tofu-Pudding-12.jpg",
@@ -556,7 +556,7 @@
       "price": "22",
       "country": "korea",
       "id": "zYvxxKSmKTE",
-      "pedidos": 0
+      "pedidos": 1
     },
     {
       "url": "https://d2j6dbq0eux0bg.cloudfront.net/images/17099551/products/199755665/3811885033.jpg",
@@ -584,6 +584,14 @@
       "country": "japan",
       "id": "edYEf8qP4LQ",
       "pedidos": 0
+    },
+    {
+      "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJTEFQMMbhrAs_jWb5YH2Y3jk1T2VxcLcl7Q&s",
+      "name": "Sushi Tempura",
+      "category": "mainCourses",
+      "price": "18",
+      "country": "china",
+      "id": "fG56eMu_u-o"
     }
   ],
   "users": [
@@ -746,6 +754,40 @@
       "metodoPago": "cash",
       "fecha": "2026-05-29T14:20:19.758Z",
       "id": "ShtL-f8v_zU"
+    },
+    {
+      "nombre": "ÒRD-006",
+      "username": "iCarmuar",
+      "items": [
+        {
+          "id": "XjU3D77nS7M",
+          "nombre": "Gyoza",
+          "precio": 25,
+          "cantidad": 2
+        },
+        {
+          "id": "pNpBWBTMjtk",
+          "nombre": "Tonkotsu Ramen",
+          "precio": 58,
+          "cantidad": 1
+        },
+        {
+          "id": "D8MskmwZ3PQ",
+          "nombre": "Mango Pudding",
+          "precio": 21,
+          "cantidad": 1
+        },
+        {
+          "id": "zYvxxKSmKTE",
+          "nombre": "Soju ",
+          "precio": 22,
+          "cantidad": 1
+        }
+      ],
+      "total": "143.45",
+      "metodoPago": "cash",
+      "fecha": "2026-05-31T19:43:26.958Z",
+      "id": "slsm7Cu1z_s"
     }
   ],
   "coupons": [

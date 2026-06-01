@@ -146,23 +146,10 @@ return (`
   
       <section id="data-container"></section>
 
-      <div
-        style="
-        display:flex;
-        justify-content:center;
-        gap:12px;
-        margin-top:20px;
-        ">
-
-        <button id="prev-page">
-        ⇐
-        </button>
-
-        <button id="next-page">
-        ⇒
-        </button>
-
-        </div>
+      <div class="paginacion">
+        <button id="prev-page"> &#8592; </button>
+        <button id="next-page"> &#8594; </button>
+      </div>
 
     </section>
 

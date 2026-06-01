@@ -7,7 +7,10 @@
     top: 0; right: 0;
     display: flex;
     flex-direction: column;
-    background: #FFFFFF;
+    background: url('/src/assets/img/fondo-carrito.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     border-left: 1px solid rgba(0,0,0,0.08);
     box-shadow: -4px 0 24px rgba(0,0,0,0.1);
     padding: 16px;

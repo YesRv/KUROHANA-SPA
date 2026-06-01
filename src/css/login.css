@@ -10,7 +10,7 @@
     justify-content: center;
     align-items: center;
     /* imagen de fondo original preservada */
-    background-image: url('/src/assets/img/login-bg2.png');
+    background-image: url('/src/assets/img/fondo-login.png');
     background-size: cover;
     background-position: center;
     overflow-y: auto;
@@ -18,21 +18,6 @@
     --font-higuen: 'Higuen', sans-serif;
     --font-agua-marina: 'Aguafina Script', sans-serif;
     --fira-sans: 'Fira Sans', sans-serif;
-}
-
-/* overlay oscuro ruby sobre la imagen */
-#login-root::before {
-    content: '';
-    position: fixed;
-    inset: 0;
-    background: linear-gradient(
-        135deg,
-        rgba(8, 1, 2, 0.75) 0%,
-        rgba(50, 8, 14, 0.55) 50%,
-        rgba(8, 1, 2, 0.75) 100%
-    );
-    z-index: 0;
-    pointer-events: none;
 }
 
 #login-root > * { position: relative; z-index: 1; }

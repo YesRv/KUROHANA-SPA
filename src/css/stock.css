@@ -578,6 +578,12 @@
   box-shadow: 0 3px 10px rgba(139,21,35,0.35);
 }
 
+.paginacion button:disabled, #prev-page:disabled, #next-page:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
 /* ── Admin cards ── */
 .titulito {
   display: block;
