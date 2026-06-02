@@ -84,8 +84,10 @@ body {
 
 #app.sin-carrito { margin-right: 0; }
 
-/* ========== SCROLLBAR ========== */
-::-webkit-scrollbar { width: 5px; height: 5px; }
-::-webkit-scrollbar-track { background: var(--fnd2); }
-::-webkit-scrollbar-thumb { background: var(--color3); border-radius: 10px; }
-::-webkit-scrollbar-thumb:hover { background: var(--color1); }
+/* ========== SCROLLBAR (solo fuera de landing) ========== */
+::-webkit-scrollbar { width: 0 !important; height: 0 !important; }
+
+body:not(:has(.landing-wrapper))::-webkit-scrollbar { width: 5px !important; height: 5px !important; }
+body:not(:has(.landing-wrapper))::-webkit-scrollbar-track { background: var(--fnd2); }
+body:not(:has(.landing-wrapper))::-webkit-scrollbar-thumb { background: var(--color3); border-radius: 10px; }
+body:not(:has(.landing-wrapper))::-webkit-scrollbar-thumb:hover { background: var(--color1); }

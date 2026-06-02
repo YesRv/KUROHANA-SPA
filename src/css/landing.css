@@ -19,10 +19,13 @@
 html:has(.landing-wrapper) {
   overflow-x: hidden;
   scrollbar-width: none;
+  overflow-y: scroll;
 }
 
 html:has(.landing-wrapper)::-webkit-scrollbar {
-  display: none;
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
 }
 
 #app:has(.landing-wrapper) {
@@ -108,9 +111,10 @@ body:has(.landing-wrapper)::-webkit-scrollbar {
 
 .landing-hero__img {
   width: 100%;
-  height: auto;
+  height: calc(100vh - 70px);
+  max-width: 100%;
   display: block;
-  object-fit: contain;
+  margin: 0 auto;
 }
 
 .landing-hero__overlay {
