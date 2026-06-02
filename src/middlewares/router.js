@@ -1,7 +1,7 @@
 export default async function routerMiddleware(routes, appContainer, loginRoot) {
   const userAuth = localStorage.getItem("auth") === "true";
   const currentHash = window.location.hash.replace("#", "");
-  const path = currentHash || "home";
+  const path = currentHash || "landing";
   const route = routes[path];
 
   if (!route) {
@@ -10,18 +10,18 @@ export default async function routerMiddleware(routes, appContainer, loginRoot) 
       <div class="not-found" style="padding: 3rem; text-align: center; color: var(--txt3);">
         <h1>Page not found</h1>
         <p>The route <strong>${path}</strong> does not exist.</p>
-        <a href="#home" style="color: var(--color4);">Go back to Home</a>
+        <a href="#landing" style="color: var(--color4);">Go back to Home</a>
       </div>
     `;
     return;
   }
 
-  if (!userAuth && path !== "login") {
-    window.location.hash = "#login";
+  if (!userAuth && path !== "login" && path !== "landing") {
+    window.location.hash = "#landing";
     return;
   }
 
-  if (userAuth && path === "login") {
+  if (userAuth && path === "login" || userAuth && path === "landing") {
     window.location.hash = "#home";
     return;
   }

@@ -76,17 +76,14 @@
         z-index: 100;
         box-sizing: border-box;
         overflow: hidden;
-        /* quitar decoración lateral en mobile horizontal */
         border-right: none;
         border-bottom: 1px solid rgba(139,21,35, 0.25);
     }
 
-    /* quitar la línea lateral vertical en modo horizontal */
     .aside::after {
         display: none;
     }
 
-    /* borde inferior decorativo */
     .aside::before {
         content: '';
         position: absolute;
@@ -178,10 +175,25 @@
     }
 
     #app {
-        margin-left: 0;
-        margin-right: 0;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
         margin-top: 56px;
         padding-bottom: 80px;
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .stock {
+        width: 100%;
+        padding: 14px 16px;
+        box-sizing: border-box;
+    }
+
+    .hero {
+        width: 100%;
+        min-height: 110px;
+        padding: 20px;
+        box-sizing: border-box;
     }
 
     .carrito {
@@ -283,15 +295,6 @@
         display: block;
     }
 
-    .stock {
-        padding: 14px 16px;
-    }
-
-    .hero {
-        min-height: 110px;
-        padding: 20px;
-    }
-
     .mensajes .saludo:first-child {
         font-size: 1.4rem;
     }
@@ -329,6 +332,62 @@
         width: 95%;
         max-height: 90vh;
     }
+
+    /* Landing responsive móvil */
+    .landing-nav {
+        padding: 0 1rem;
+    }
+
+    .landing-nav__links {
+        display: none;
+    }
+
+    .landing-sobre {
+        grid-template-columns: 1fr;
+        padding: 4rem 1.5rem;
+        gap: 2rem;
+    }
+
+    .landing-tech {
+        padding: 4rem 1.5rem;
+    }
+
+    .landing-tech__grid {
+        gap: 0.8rem;
+    }
+
+    .landing-tech__item {
+        min-width: 100px;
+        padding: 1rem;
+    }
+
+    .landing-equipo {
+        padding: 4rem 1.5rem;
+    }
+
+    .landing-equipo__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .landing-card {
+        height: 280px;
+    }
+
+    .landing-branding {
+        padding: 4rem 1.5rem;
+    }
+
+    .landing-branding__cards {
+        grid-template-columns: 1fr;
+    }
+
+    .landing-footer {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+        padding: 2rem 1.5rem;
+    }
 }
 
 @media (max-width: 400px) {
@@ -347,5 +406,13 @@
     .exit button#exit-btn {
         padding: 6px 6px;
         font-size: 0.68rem;
+    }
+
+    .landing-equipo__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .landing-card {
+        height: 300px;
     }
 }

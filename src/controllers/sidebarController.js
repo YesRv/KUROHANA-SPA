@@ -12,15 +12,15 @@ import { initAdministrator } from "./adminController.js";
 export default function sidebarController(appContainer) {
     const exitButton = document.getElementById("exit-btn")
 
-    exitButton.addEventListener("click", ()=> {
-        console.log("Iniciando progreso de cierre de sesión...")
-        localStorage.clear();
-        // Limpiar clases residuales del contenedor principal
-        appContainer.classList.remove("sin-carrito");
-        appContainer.innerHTML = "";
-        window.location.hash = "#login";
-    })
-
+    exitButton.addEventListener("click", () => {
+      localStorage.clear();
+      appContainer.classList.remove("sin-carrito");
+      appContainer.innerHTML = "";
+      localStorage.setItem("goToLogin", "true");
+      window.location.hash = "#landing";
+      window.location.hash = "#login";
+    });
+    
     const btnSettings = document.getElementById("btn-settings");
     btnSettings.addEventListener("click", () => {
         const settingsId = "settings-modal";
