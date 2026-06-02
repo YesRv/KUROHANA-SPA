@@ -49,27 +49,27 @@ export function landingView() {
       <h2 class="landing-tech__title">Tecnologías</h2>
       <div class="landing-tech__grid">
         <div class="landing-tech__item">
-          <span class="landing-tech__icon">⚡</span>
+          <span class="landing-tech__icon"><img style="width:40px; height: 40px;" src="/src/assets/img/landing/vite.png"></span>
           <p>Vite</p>
         </div>
         <div class="landing-tech__item">
-          <span class="landing-tech__icon">🟨</span>
-          <p>JavaScript Vanilla</p>
+          <span class="landing-tech__icon"><img style="width: 40px; height: 40px;" src="/src/assets/img/landing/js.png"></span>
+          <p>JavaScript</p>
         </div>
         <div class="landing-tech__item">
-          <span class="landing-tech__icon">🎨</span>
-          <p>Tailwind CSS v4</p>
+          <span class="landing-tech__icon"><img style="width:30px; height: 30px;" src="/src/assets/img/landing/tailwind.png"></span>
+          <p>Tailwind CSS</p>
         </div>
         <div class="landing-tech__item">
-          <span class="landing-tech__icon">🗄️</span>
+          <span class="landing-tech__icon"><img style="width: 40px; height: 40px;" src="/src/assets/img/landing/json.png"></span>
           <p>JSON Server</p>
         </div>
         <div class="landing-tech__item">
-          <span class="landing-tech__icon">🔐</span>
+          <span class="landing-tech__icon"><img style="width: 40px; height: 40px;" src="/src/assets/img/landing/SHA-256.png"></span>
           <p>SHA-256</p>
         </div>
         <div class="landing-tech__item">
-          <span class="landing-tech__icon">🏗️</span>
+          <span class="landing-tech__icon"><img style="width: 40px; height: 40px;" src="/src/assets/img/landing/mvc.png"></span>
           <p>Patrón MVC</p>
         </div>
       </div>
@@ -84,7 +84,7 @@ export function landingView() {
         <div class="landing-card">
           <div class="landing-card__inner">
             <div class="landing-card__front">
-              <img src="/src/assets/img/team/maria.jpg" alt="Maria Muñoz" />
+              <img src="/src/assets/img/landing/Angelus.jpg" alt="Maria Muñoz" />
               <div class="landing-card__front-info">
                 <h3>Maria Muñoz</h3>
                 <span>Angelus</span>
@@ -100,7 +100,7 @@ export function landingView() {
         <div class="landing-card">
           <div class="landing-card__inner">
             <div class="landing-card__front">
-              <img src="/src/assets/img/team/gustavo.jpg" alt="Gustavo Guzman" />
+              <img src="/src/assets/img/landing/zerik.jpg" alt="Gustavo Guzman" />
               <div class="landing-card__front-info">
                 <h3>Gustavo Guzmán</h3>
                 <span>Zerik</span>
@@ -116,7 +116,7 @@ export function landingView() {
         <div class="landing-card">
           <div class="landing-card__inner">
             <div class="landing-card__front">
-              <img src="/src/assets/img/team/yesica.jpg" alt="Yesica Rodriguez" />
+              <img src="/src/assets/img/landing/Yess.jpg" alt="Yesica Rodriguez" />
               <div class="landing-card__front-info">
                 <h3>Yesica Rodríguez</h3>
                 <span>Yess</span>
@@ -132,7 +132,7 @@ export function landingView() {
         <div class="landing-card">
           <div class="landing-card__inner">
             <div class="landing-card__front">
-              <img src="/src/assets/img/team/carlos.jpg" alt="Carlos Muñoz" />
+              <img src="/src/assets/img/landing/carlos.png" alt="Carlos Muñoz" />
               <div class="landing-card__front-info">
                 <h3>Carlos Muñoz</h3>
                 <span>Charles</span>
